@@ -12,10 +12,9 @@
     "server": "nodemon server.js",
     "seed": "node seed.js"
   },
-  "keywords": [
-    "react",
-    "redux",
-    "skeleton"
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
   ],
   "repository": {
     "type": "git",
@@ -44,9 +43,11 @@
     "sequelize": "^5.21.2"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.7.4",
     "axios-mock-adapter": "^1.15.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
+    "babel-install": "2.1.0",
     "babel-loader": "^7.1.4",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
@@ -69,7 +70,7 @@
     "style-loader": "^0.21.0",
     "supertest": "^3.1.0",
     "volleyball": "^1.5.1",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5"
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }

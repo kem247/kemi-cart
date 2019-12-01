@@ -40,7 +40,7 @@ export const deleteProducts = productId => dispatch => {
   }
 };
 
-export const fetchProduct= () => async dispatch => {
+export const fetchProducts = () => async dispatch => {
   try {
     const { data } = await axios.get("/api/products");
 
@@ -61,7 +61,7 @@ export const submitProducts = product => async dispatch => {
 
 const productsReducer = (state = [], action) => {
   switch (action.type) {
-    case SET_products:
+    case SET_PRDOUCTS:
       return action.products;
     case ADD_PRODUCT:
       return [...state, action.product];

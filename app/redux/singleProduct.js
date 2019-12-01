@@ -24,17 +24,17 @@ export const fetchProduct = productId => async dispatch => {
   }
 };
 
-export const updateProduct = (productId, product) => async dispatch => {
+export const updatedProduct = (productId, product) => async dispatch => {
   try {
     const { data } = await axios.put(`/api/products/${productId}`, product);
-    dispatch(fetchProducts(productId));
+    dispatch(fetchProduct(productId));
     dispatch(updateProduct(productId, data));
   } catch (err) {
     console.log("There's an error with updateProducts on singleProduct!");
   }
 };
 
-export const fetchProduct = productId => async dispatch => {
+export const fetchedProduct = productId => async dispatch => {
   try {
     const { data: product } = await axios.get(`/api/products/${productId}`);
 

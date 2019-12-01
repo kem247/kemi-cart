@@ -46,15 +46,15 @@ export const fetchCart = cartId => async dispatch => {
   }
 };
 
-export const updateCart = (cartId, cart) => async dispatch => {
-  try {
-    const { data } = await axios.put(`/api/cart/${cartId}`, cart);
+// export const updateCart = (cartId, cart) => async dispatch => {
+//   try {
+//     const { data } = await axios.put(`/api/cart/${cartId}`, cart);
 
-    dispatch(updateCart(cartId, data));
-  } catch (err) {
-    console.log("There's an error with updateCart on singleCart!");
-  }
-};
+//     dispatch(updateCart(cartId, data));
+//   } catch (err) {
+//     console.log("There's an error with updateCart on singleCart!");
+//   }
+// };
 
 export const deleteCart = productId => {
   return async dispatch => {

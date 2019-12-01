@@ -1,6 +1,6 @@
 const { db, Cart, Product } = require("./server/db");
 
-const cart = [
+const carts = [
   {
     quantity: 5,
     total: 6.0
@@ -50,7 +50,7 @@ const products = [
 ];
 
 const seed = () =>
-  Promise.all(cart.map(cart => Cart.create(cart))).then(() =>
+  Promise.all(carts.map(cart => Cart.create(cart))).then(() =>
     Promise.all(products.map(product => Product.create(product)))
   );
 
